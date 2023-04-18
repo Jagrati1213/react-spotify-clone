@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-sopity-clone/static/css/main.677baa62.css",
+    "main.js": "/react-sopity-clone/static/js/main.23e7d47f.js",
+    "static/media/artist.jpg": "/react-sopity-clone/static/media/artist.1162a757da452033436f.jpg",
+    "static/media/track.png": "/react-sopity-clone/static/media/track.7c7d44966c3beadf22ec.png",
+    "index.html": "/react-sopity-clone/index.html",
+    "main.677baa62.css.map": "/react-sopity-clone/static/css/main.677baa62.css.map",
+    "main.23e7d47f.js.map": "/react-sopity-clone/static/js/main.23e7d47f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.677baa62.css",
+    "static/js/main.23e7d47f.js"
+  ]
+}
