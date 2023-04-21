@@ -1,57 +1,66 @@
-import React from 'react';
-import Artist from "../images/artist.jpg";
-import Check from "../images/check.png";
-import {FaEllipsisH, FaHeadphones,FaCheck } from "react-icons/fa";
+import React, { useEffect, useState } from 'react';
+import { apiClient } from '../spotify';
+import Profile from "../images/profile.png";
 
 function Banner() {
+
+  const [userImg, setUserImg] = useState(Profile);
+  const [follower, setFollower] = useState(0);
+  const [following, setFollowing] = useState(0);
+  const [playList, setPlayList] = useState(0);
+  const [userName, setUserName] = useState('User Name');
+  const [userUrl, setUserUrl] = useState('');
+
+  useEffect(()=>{
+
+    apiClient.get('me').then(res => console.log(res));
+
+    // set img
+    apiClient.get('me').then(res => setUserImg(res.data.images[0].url));
+    // set name
+    apiClient.get('me').then(res => setUserName(res.data.display_name));
+    // set followers
+    apiClient.get('me').then(res => setFollower(res.data.followers.total));
+    // set url
+    apiClient.get('me').then(res => setUserUrl(res.data.external_urls.spotify));
+
+    
+  },[]);
+
   return (
-    <div className='banner h-80 relative'>
-        {/* banner-img */}
-        <img src= {Artist} alt="albumImg" className='bannerImg absolute top-0 left-0 w-full h-full object-cover grayscale'/>
+    <div className='banner mt-12'>
+          {/* Profile Image */}
+          <div className="profile_container flex flex-col justify-center items-center">
 
-        {/* Content of album */}
-        <div className="content absolute w-full top-0 left-0 ring-0 bottom-0 py-5 px-8 flex flex-col z-[3]">
-            
-            {/* BreadCamp */}
-             <div className="breadCamp flex justify-between items-center">
-                <p className='text-[#848484] text-sm font-semibold' style={{letterSpacing:'1px'}}>
-                    smaple <span className='text-white'>/popular Artist</span></p>
-                <i className='text-white text-xl cursor-pointer'><FaEllipsisH/></i>
-             </div>
+               <div className="profile w-40 h-40 bg-black rounded-full flex items-center">
+                 <img src={userImg} alt="Me" className='rounded-full' />
+               </div>
 
-            {/* Artist Container */}
-             <div className="artist mt-auto text-white flex justify-between items-center">
-                 
-                 {/* Name of artist */}
-                <div className="left">
+               <a href={userUrl} target="_blank">
+                  <h1 className='text-white hover:text-green-500 cursor-pointer md:text-5xl text-4xl font-bold my-4'>{userName}</h1>
+               </a>
 
-                     <div className="name flex items-center">
-                        <h2 className='font-bold text-[50px]'>A-Ha</h2>
-                        <img src={Check} alt='check-img' className='w-8 ml-3' />
-                     </div>
+               <div className="user_social grid grid-cols-3 gap-8 mt-5">
 
-                     <p className='text-sm flex items-center'>
-                        <i className='mr-2'><FaHeadphones/></i>
-                        11,184,1811 <span className='text-[#848484] ml-1'>Monthly listeners</span>
-                     </p>
-                </div>
+                    <div className="user_follower text-center text-base">
+                         <span className='text-green-500'>{follower}</span>
+                         <p className='text-[#848484]'>Followers</p>
+                    </div>
 
-                {/* Social & Play-pause */}
-                <div className="right flex items-center">
+                    <div className="user_following text-center text-base">
+                         <span className='text-green-500'>{following}</span>
+                         <p className='text-[#848484]'>Following</p>
+                    </div>
 
-                     <a href="#" className='flex items-center py-2 px-8 text-base text-white mr-4 rounded-full bg-green-600 font-bold text-center hover:shadow hover:shadow-green-400 '>Play</a>
+                    <div className="user_playList text-center text-base">
+                         <span className='text-green-500'>{playList}</span>
+                         <p className='text-[#848484]'>Playlist</p>
+                    </div>
+               </div>
 
-                     <a href="#" className='flex items-center py-2 px-8 text-base text-white ml-4 rounded-full bg-[#010101ba] font-bold text-center border-[1px] border-[#ffffff1a] hover:shadow-lg hover:shadow-[#00000066]'>
-                        <i className='mr-3 text-sm'><FaCheck/></i> Following
-                    </a>
-                </div>
+               <button className='rounded-full my-5 px-6 py-2 border-2 border-white text-white  hover:border-green-600 hover:bg-green-600 cursor-pointer'>LOGOUT</button>
+          </div>
 
-             </div>
-
-        </div>
-
-        {/* Effect on bg */}
-        <div className="bottomLayer absolute bottom-0 left-0 w-full h-20 " style={{backgroundImage:'linear-gradient(transparent, rgba(0,0,0,0.9))'}}></div>
     </div>
   )
 }
