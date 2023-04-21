@@ -2,29 +2,27 @@ import React,{useEffect} from 'react';
 import '../style/MainContainer.css';
 import Banner from './Banner';
 import { FaUsers } from "react-icons/fa";
-import Login from './Login';
-// import { Song } from './Song';
 
 function MainContainer() {
 
-      // add active class in menu
-      useEffect(()=>{
-        const allList = document.querySelector('.menuList ul').querySelectorAll('li');
+      // // add active class in menu
+      // useEffect(()=>{
+      //   const allList = document.querySelector('.menuList ul').querySelectorAll('li');
   
-      function changeMenuActive(){
-          allList.forEach(n=>n.classList.remove('active'));
-          this.classList.add('active')
-      }
-      allList.forEach((n)=>{
-          n.addEventListener('click', changeMenuActive);
-      })
-      },[]);
+      // function changeMenuActive(){
+      //     allList.forEach(n=>n.classList.remove('active'));
+      //     this.classList.add('active')
+      // }
+      // allList.forEach((n)=>{
+      //     n.addEventListener('click', changeMenuActive);
+      // })
+      // },[]);
 
   return (
     <div className='mainContainer h-full bg-black flex-grow'>
         <Banner/>
         
-        <div className="menuList flex items-center justify-between py-3 px-6 bg-[#2c2c2c]">
+        {/* <div className="menuList flex items-center justify-between py-3 px-6 bg-[#2c2c2c]">
            <ul className='flex items-center'>
               <li className='mx-6 relative'>
                 <a href="#" className='text-[#848484] hover:text-white text-sm font-bold'>
@@ -49,9 +47,7 @@ function MainContainer() {
             12.3M 
             <span className='text-xs ml-2 text-center text-[#848484]'>Followers</span>
            </p>
-        </div>
-         {/* <Song/> */}
-         <Login/>
+        </div> */}
     </div>
   )
 }
