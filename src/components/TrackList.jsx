@@ -1,15 +1,25 @@
-import React from 'react';
+import React,{ useEffect, useState } from 'react';
 import { BsVolumeUpFill,BsMusicNoteList } from "react-icons/bs";
 import {FaDesktop  } from "react-icons/fa";
 import TrackImg from "../images/track.png";
+import { apiClient } from '../spotify';
 
 function TrackList() {
+  
+  // set image from auth
+  const [image, setImage] = useState(TrackImg);
+  
+  useEffect(()=>{
+
+    apiClient.get('me').then(res => setImage(res.data.images[0].url));
+    
+  },[]);
   return (
     <div className='trackContainer border-t-[1px] border-[#848484] pt-5 hidden md:block'>
 
         {/* Image & name of song */}
         <div className="top flex items-center">
-             <img className='w-12' src={TrackImg} alt="song-img" />
+             <img className='w-12 rounded-full' src={image} alt="song-img" />
              <p className='trackName ml-3 text-white text-[14px]'>sample name 
              <span className='trackArt block text-xs text-[#848484]'>artist name</span></p>
         </div>
