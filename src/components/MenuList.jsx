@@ -1,14 +1,16 @@
 import React from 'react';
-import {BsFillHouseFill, BsJournalAlbum} from 'react-icons/bs';
-import {TiPlus} from 'react-icons/ti'
-import {FaBroadcastTower, FaMicrophoneAlt,FaPodcast} from 'react-icons/fa'
+import { TbMicrophone2} from 'react-icons/tb';
+import { IoMdContact } from 'react-icons/io'
+import {RxTimer} from 'react-icons/rx'
+import {BsMusicNoteList} from 'react-icons/bs'
+import {FaHeart,FaThList} from 'react-icons/fa'
 
 const MenuList = [
-    {id:1,icon:<BsFillHouseFill/>,name:"Home"},
-    {id:2,icon:<BsJournalAlbum/>,name:"Album"},
-    {id:3,icon:<TiPlus/>,name:"Discover"},
-    {id:4,icon:<FaBroadcastTower/>,name:"Radio"},
-    {id:5,icon:<FaMicrophoneAlt/>,name:"Artist"},
-    {id:6,icon:<FaPodcast/>,name:"Podcasts"},
+    {id:1,icon:<IoMdContact/>,name:"Profile"},
+    {id:2,icon:<FaThList/>,name:"Feed"},
+    {id:3,icon:<TbMicrophone2/>,name:"Top Artist"},
+    {id:4,icon:<RxTimer/>,name:"Recent"},
+    {id:5,icon:<FaHeart/>,name:"Favorites"},
+    {id:6,icon:<BsMusicNoteList/>,name:"PlayList"},
 ]
 export {MenuList};
