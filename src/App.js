@@ -4,6 +4,7 @@ import { LeftMenu } from './components/LeftMenu';
 import { MainContainer } from './components/MainContainer';
 import { RightMenu } from './components/RightMenu';
 import Login from './screens/auth/Login';
+import { setClientToken } from './spotify';
 
 function App() {
   // create token
@@ -22,9 +23,11 @@ function App() {
       // Set in localstorage
       window.localStorage.setItem('token', access_token);
       setToken(access_token);
+      setClientToken(access_token);
     }
     else {
       setToken(token);
+      setClientToken(token);
     }
   }, []);
   return (
