@@ -23,7 +23,7 @@ function Menu({menuObject}) {
                 { menuObject && menuObject.map((menu,ind)=>{
                     return <li className='relative md:my-2 my-6 w-full py-2' key={ind}>
                             <a href="#" className='text-[#848484] flex items-center flex-col justify-center text-sm md:ml-0 ml-2 hover:text-white'>
-                                <i className='text-2xl'>{menu.icon}</i>
+                                <i className='text-xl'>{menu.icon}</i>
                                 <span className='inline mt-1'>{menu.name}</span>
                             </a>
                         </li>
