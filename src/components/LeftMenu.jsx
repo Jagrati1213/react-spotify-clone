@@ -3,8 +3,8 @@ import '../style/LeftMenu.css';
 import { FaSpotify,FaEllipsisH,FaSearch } from "react-icons/fa";
 import { Menu } from './Menu';
 import { MenuList} from './MenuList';
-import { MenuPlayList } from './MenuPlayList';
-import { TrackList } from './TrackList';
+// import { MenuPlayList } from './MenuPlayList';
+// import { TrackList } from './TrackList';
 
 function LeftMenu() {
 // md:w-72
@@ -12,7 +12,7 @@ function LeftMenu() {
     <section className='leftMenu bg-black h-full min-h-screen w-28 min-w-[64px]  py-6 px-4 overflow-hidden flex justify-between flex-col'>
 
       {/* Logo */}
-       <div className="logo-container text-white flex items-center justify-center">
+       <div className="logo-container text-green-500 flex items-center justify-center">
           <i className='md:text-5xl text-4xl'><FaSpotify/></i>
        </div>
 
@@ -30,7 +30,7 @@ function LeftMenu() {
        {/* <MenuPlayList/> */}
 
        {/* Song-Details */}
-       <TrackList/>
+       {/* <TrackList/> */}
        
     </section>   
   )
