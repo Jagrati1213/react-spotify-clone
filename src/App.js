@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react';
 import './App.css';
-import { LeftMenu } from './components/LeftMenu';
-import { MainContainer } from './components/MainContainer';
-import { RightMenu } from './components/RightMenu';
-import Login from './screens/auth/Login';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { LeftMenu } from './components/sideMenu/LeftMenu';
+import Login from './components/auth/Login';
 import { setClientToken } from './spotify';
+import { UserProfile } from './components/profile/UserProfile';
+import { Index } from './components/library/Index';
 
 function App() {
+
   // create token
   const [token, setToken] = useState('');
 
@@ -30,20 +32,28 @@ function App() {
       setClientToken(token);
     }
   }, []);
-  return (
-    <div className="App w-full h-screen overflow-hidden flex">
-      {
-        !token ? (<Login />) :
-          (
-            <>
-              <LeftMenu />
-              <MainContainer />
-              {/* <RightMenu /> */}
-            </>
 
-          )
-      }
-    </div>
+  return (
+    <>
+      <Router>
+        <div className="App w-full h-screen overflow-hidden flex relative">
+          {
+            !token ? (<Login />) :
+              (
+                <>
+                  <LeftMenu />
+
+                  <Routes>
+                    <Route path='/' element={<UserProfile />} />
+                    <Route path='/playlist' element={<Index />} />
+                  </Routes>
+                </>
+              )
+          }
+
+        </div>
+      </Router>
+    </>
   );
 }
 
