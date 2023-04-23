@@ -6,7 +6,7 @@ import { MenuList} from './MenuList';
 function LeftMenu() {
 
   return (
-    <section className='leftMenu bg-black h-full min-h-screen w-28 min-w-[64px]  py-6 px-4 overflow-hidden flex justify-between flex-col border-r border-[#848484]  top-0 left-0'>
+    <section className='leftMenu bg-black h-full min-h-screen w-28 min-w-[64px]  py-6 px-4 overflow-hidden flex justify-between flex-col  top-0 left-0'>
 
       {/* Logo */}
        <div className="logo-container text-green-500 flex items-center justify-center">
