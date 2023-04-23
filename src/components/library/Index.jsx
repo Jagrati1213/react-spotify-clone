@@ -26,8 +26,9 @@ function Index() {
 
        <div className="library_body w-full h-full grid gap-7 flex-wrap justify-between">
        {
-           playList.map((item,idx)=>{
-              return <div className='playlist_card relative rounded-md  text-white flex flex-col text-center my-3' key={idx}>
+           playList.map((item)=>{
+              return <div className='playlist_card relative rounded-md  text-white flex flex-col text-center my-3' key={item.id}
+              onClick={()=>{ playPlayList(item.id)}}>
                {
                 item.images.length ?(
                    <div className='flex justify-center bg-[#282828] rounded'>
