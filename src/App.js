@@ -6,6 +6,7 @@ import Login from './components/auth/Login';
 import { setClientToken } from './spotify';
 import { UserProfile } from './components/profile/UserProfile';
 import { Index } from './components/library/Index';
+import { Player } from './components/player/Player';
 
 function App() {
 
@@ -45,7 +46,10 @@ function App() {
 
                   <Routes>
                     <Route path='/' element={<UserProfile />} />
+
                     <Route path='/playlist' element={<Index />} />
+
+                    <Route path='/player' element={<Player />} />
                   </Routes>
                 </>
               )
