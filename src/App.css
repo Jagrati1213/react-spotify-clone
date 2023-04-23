@@ -8,6 +8,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background: #181818;
+}
+
 /* Side Menu Style */
 .leftMenu {
     transition: all .3s cubic-bezier(0.175, 0.008, 0.32, 1.275);
@@ -32,4 +36,21 @@
 
 .menuContainer ul li.active a {
     color: white;
+}
+
+/* Playlist style */
+.library_body {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media only screen and (max-width: 765px) {
+    .library_body {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .library_body {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
 }
