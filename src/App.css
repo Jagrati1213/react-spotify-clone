@@ -45,6 +45,7 @@ body {
 
 .playlist_card:hover .playlist_fade {
     opacity: 1;
+    cursor: pointer;
 }
 
 .playlist_fade {
