@@ -2,17 +2,23 @@ import React, { useEffect, useState } from 'react'
 import { apiClient } from '../../spotify';
 import {FaMusic} from 'react-icons/fa'
 import { IconContext } from 'react-icons';
-import {AiFillPlayCircle} from 'react-icons/ai'
+import {AiFillPlayCircle} from 'react-icons/ai';
+import { useNavigate } from 'react-router';
 
 function Index() {
     
   const [playList,setPlayList] = useState([]);
 
   useEffect(()=>{
-
     apiClient.get('me/playlists').then(res => setPlayList(res.data.items));
-  
    },[]);
+
+   const navigate = useNavigate();
+
+   const playPlayList =(id)=>{
+    navigate('/player',{state:{id:id}});
+   }
+   
 
   return (
     <div className='screen_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto  overflow-y-auto'>
