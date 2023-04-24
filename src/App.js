@@ -26,7 +26,7 @@ function App() {
       // Set in localstorage
       window.localStorage.setItem('token', access_token);
       setToken(access_token);
-      setClientToken(access_token);
+      setClientToken(access_token); //call the api function
     }
     else {
       setToken(token);
@@ -46,9 +46,7 @@ function App() {
 
                   <Routes>
                     <Route path='/' element={<UserProfile />} />
-
                     <Route path='/playlist' element={<Index />} />
-
                     <Route path='/player' element={<Player />} />
                   </Routes>
                 </>
