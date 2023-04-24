@@ -68,3 +68,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }
+
+.album_img {
+    width: 90%;
+}
