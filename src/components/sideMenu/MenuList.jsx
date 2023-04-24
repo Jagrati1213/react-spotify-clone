@@ -15,7 +15,7 @@ function MenuList({url,icon,title}){
      const btnClass = isActive ? 'active':'';
 
     return(
-    <li className={`${btnClass} relative md:my-2 my-6 w-full py-2 cursor-pointer`}>
+    <li className={`${btnClass} relative md:my-2 w-full py-2 cursor-pointer`}>
         <Link to={url} className={`text-[#848484] flex items-center flex-col justify-center text-[12px] md:ml-0 ml-2 hover:text-white`}>  
 
             <IconContext.Provider value={{size:'20px',className:'btn-icon'}}>
