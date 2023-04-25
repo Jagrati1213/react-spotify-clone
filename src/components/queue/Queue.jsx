@@ -3,21 +3,19 @@ import { IconContext } from 'react-icons';
 import {MdOutlineWatchLater} from 'react-icons/md'
 
 function Queue({ tracks, setCurrentIndex}) {
+  
   return (
     <div className='queue_container w-full h-full mx-6'>
         <p className='upNext my-6 ml-5 font-bold text-white text-2xl'> Up Next</p>
 
-            <table className="queue-list w-full table table-songs">
+            <table className="queue-list w-[95%] mx-auto table table-songs text-xs">
               <thead className='border-b-2 border-zinc-500'>
                 <tr>
-                  <th>#</th>
-                  <th></th>
-                  <th>Song</th>
-                  <th>Artist</th>
-                  <th>Album</th>
-                  <th>Date Added</th>
+                  <th className='text-sm text-left text-[#848484] py-3 uppercase'>#</th>
+                  <th className='text-sm text-left text-[#848484] py-3 uppercase'>Song</th>
+                  <th className='text-sm text-left text-[#848484] py-3 uppercase'>Artist</th>
                   <th>
-                    <IconContext.Provider value={{size:'25px'}}>
+                    <IconContext.Provider value={{size:'25px',color:'#848484'}}>
                          <MdOutlineWatchLater/>
                       </IconContext.Provider>
                    </th>
@@ -25,20 +23,13 @@ function Queue({ tracks, setCurrentIndex}) {
               </thead>
               <tbody>
                     {
-                      tracks.map((track)=>{
-                        <tr tabindex="1">
-                        <td>
-                          <a href="#" tabindex="0" class="play-btn fa-stack fa-lg">
-                            <span class="fa fa-play fa-stack-1x"></span>
-                            <span class="fa fa-circle-thin fa-stack-2x"></span>
-                          </a>
-                        </td>
-                        <td><span class="fa fa-check"></span></td>
-                        <td>Memory</td>
-                        <td>Sugarcult</td>
-                        <td>Palm Trees and Power Lines</td>
-                        <td class="secondary-info">2016-07-23</td>
-                        <td class="secondary-info">3:54</td>
+                      tracks?.map((track,idx)=>{
+                       console.log(track?.track?.artists[0].name);
+                       return <tr tabIndex="1" key={idx} onClick={()=> setCurrentIndex(idx)} className='hover:bg-[#262626] focus:bg-[#262626] text-sm cursor-pointer'>
+                          <td className='text-white text-sm py-6'>{idx+1}</td>
+                          <td className='text-white text-sm py-6'>{track?.track?.name}</td>
+                          <td className='text-white text-sm py-6'>{track?.track?.artists[0].name}</td>
+                          <td className='text-[#7d7e81] text-sm py-6'>3:54</td>
                       </tr> 
                       })
                     }
