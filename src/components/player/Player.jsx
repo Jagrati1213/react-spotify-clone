@@ -22,8 +22,15 @@ function Player() {
         }
     },[location.state]);
 
+    // Change the player index while click
+    useEffect(()=>{
+      if(currentIndex){
+        setCurrentTracks(tracks[currentIndex].track);
+      }
+    },[currentIndex,tracks]);
+
   return (
-      <div className="player_screen h-full w-full max-w-screen flex justify-between flex-col">
+      <div className="player_screen h-full w-full max-w-screen flex justify-between flex-col overflow-y-scroll overflow-x-hidden">
         <Songcard album={currentTrack.album} />
         <Queue tracks={tracks} setCurrentIndex={setCurrentIndex}/>
       </div>
