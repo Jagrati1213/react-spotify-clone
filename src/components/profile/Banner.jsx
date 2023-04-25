@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { apiClient } from '../../spotify';
+import { apiClient, setClientToken } from '../../spotify';
 import profile from '../../images/profile.png';
 
 function Banner() {
@@ -13,17 +13,19 @@ function Banner() {
 
   useEffect(()=>{
 
-    // set img
-    apiClient.get('me').then(res => setUserImg(res.data.images[0].url));
-
-    // set name
-    apiClient.get('me').then(res => setUserName(res.data.display_name));
-
-    // set followers
-    apiClient.get('me').then(res => setFollower(res.data.followers.total));
+    apiClient.get('me').then(res => {
+     // set img
+     setUserImg(res.data.images[0].url);
     
-    // set url
-    apiClient.get('me').then(res => setUserUrl(res.data.external_urls.spotify));
+     // set url
+     setUserUrl(res.data.external_urls.spotify);
+   
+     // set name
+     setUserName(res.data.display_name);
+    
+     // set followers
+     setFollower(res.data.followers.total);
+    });
     
     //set playlist
     apiClient.get('me/playlists').then(res => setPlayList(res.data.items.length));
@@ -62,7 +64,7 @@ function Banner() {
                     </div>
                </div>
 
-               <button className='rounded-full my-5 px-6 py-2 border-2 border-white text-white  hover:border-green-600 hover:bg-green-600 cursor-pointer'>LOGOUT</button>
+               <button className='rounded-full my-5 px-6 py-2 border-2 border-white text-white  hover:text-black hover:bg-white cursor-pointer'>LOGOUT</button>
           </div>
 
     </div>
