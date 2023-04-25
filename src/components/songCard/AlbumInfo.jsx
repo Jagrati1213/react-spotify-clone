@@ -14,7 +14,7 @@ function AlbumInfo({album}) {
           <p className=' font-bold text-2xl md:text-4xl text-white'>{album?.name}</p>
         </div>
         <div className="album_info ">
-          <p className='text-[#848484] text-base font-semibold my-2'>{`• ${album?.total_tracks} songs • ${artists.join(',')}`}</p>
+          <p className='text-[#848484] text-base font-semibold my-2'>{`• ${album?.total_tracks} songs • ${artists.join(' , ')}`}</p>
         </div>
     </div>
   )
