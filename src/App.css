@@ -88,47 +88,6 @@ body {
     }
 }
 
-/* Player */
-.table-songs,
-.table-songs thead th,
-.table-songs thead tr th,
-.table-songs tbody tr,
-.table-songs tbody tr td {
-    color: #dadce1;
-    font-size: 14px;
-    text-align: center;
-}
-
-.table-songs thead tr th {
-    padding: 12px 0;
-    font-size: 15px;
-}
-
-.table-songs tbody tr:focus,
-.table-songs tbody tr:hover {
-    background-color: #262626;
-}
-
-.table-songs thead tr th {
-    text-transform: uppercase;
-    color: #7d7e81;
-    font-weight: normal;
-}
-
-.table-songs tbody {
-    overflow: scroll;
-    height: 200px;
-}
-
-.table-songs .play-btn {
-    color: transparent;
-    font-size: 12px;
-}
-
-.table-songs .secondary-info {
-    color: #7d7e81;
-}
-
 .table-songs tr.active .play-btn,
 .table-songs .play-btn:focus,
 .table-songs .play-btn:hover {
