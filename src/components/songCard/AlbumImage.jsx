@@ -2,13 +2,14 @@ import React from 'react';
 import  track from '../../images/track.png';
 
 
-function AlbumImage({url}) {
+function AlbumImage({ url }) {
   return (
-<div className="album_img flex items-center relative z-[1]">
+<div className="album_img overflow-hidden flex">
     {url?(
-        <img src={url} alt='album'className='rounded-md w-full' style={{aspectRatio:'1'}} />  
+        <img src={url} alt='album'className='rounded-md w-64 object-cover' />  
         ):
-        <img src={track} alt='album'className='rounded-md w-full' />
+        <img src={track} alt='album'className='rounded-md w-64 object-cover' />
+
     }</div>
   )
 }
