@@ -96,12 +96,16 @@ body {
 }
 
 /* Audio player */
+:root {
+    --track-bg: #312f2f;
+}
+
 .progress {
-    background: #312f2f;
+    background: var(--track-bg);
     border: solid 2px transparent;
     border-radius: 8px;
     height: 6px;
-    width: 600px;
+    width: var(--track-width);
     outline: none;
     transition: background 450ms ease-in;
     -webkit-appearance: none;
@@ -109,10 +113,6 @@ body {
 }
 
 .progress::-webkit-slider-thumb {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
     -webkit-appearance: none;
-    cursor: pointer;
-    background: white;
+    appearance: none;
 }
