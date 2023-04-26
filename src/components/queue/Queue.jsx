@@ -24,7 +24,6 @@ function Queue({ tracks, setCurrentIndex}) {
               <tbody>
                     {
                       tracks?.map((track,idx)=>{
-                       console.log(track?.track?.artists[0].name);
                        return <tr tabIndex="1" key={idx} onClick={()=> setCurrentIndex(idx)} className='hover:bg-[#262626] focus:bg-[#262626] text-sm cursor-pointer'>
                           <td className='text-white text-sm py-6'>{idx+1}</td>
                           <td className='text-white text-sm py-6'>{track?.track?.name}</td>
