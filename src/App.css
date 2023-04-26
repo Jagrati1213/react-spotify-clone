@@ -94,3 +94,25 @@ body {
     color: #dadce1;
     outline: none;
 }
+
+/* Audio player */
+.progress {
+    background: #312f2f;
+    border: solid 2px transparent;
+    border-radius: 8px;
+    height: 6px;
+    width: 600px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.progress::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: white;
+}
