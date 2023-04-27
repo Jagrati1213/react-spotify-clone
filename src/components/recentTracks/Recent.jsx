@@ -16,7 +16,6 @@ function Recent(){
         const minutes = Math.floor((milliseconds / 1000 / 60) % 60);
     
         return `${minutes}:${resultSec}`;
-        // return `${minutes}:${seconds}`;
     }
    
    useEffect(()=>{
