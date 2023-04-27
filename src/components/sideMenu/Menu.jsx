@@ -16,7 +16,7 @@ function Menu() {
                 {/* Render MenuList */}
                 <MenuList url='/' title='Profile' icon={<GoPerson/>}/>
                 <MenuList url='/artist/:artistId' title='Top Artist' icon={<TbMicrophone2/>}/>
-                <MenuList url='/track/:trackId' title='Top Tracks' icon={<FaMusic/>}/>
+                <MenuList url='/tracks' title='Top Tracks' icon={<FaMusic/>}/>
                 <MenuList url='/recent' title='Recent' icon={<RxTimer/>}/>
                 <MenuList url='/playlist' title='Playlist' icon={<BsMusicNoteList/>}/>
                 <MenuList url='/player' title='Player' icon={<FaPlay/>}/>
