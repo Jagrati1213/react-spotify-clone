@@ -60,7 +60,7 @@ const changeProgress= ()=>{
 }
 
 const autoPause = ()=>{
-  if(progressBar.current.value == duration){
+  if(progressBar.current.value === duration){
     setIsplaying(false);
     // progressBar.current.style.setProperty("--track-width",`(0%`);
   }else{
