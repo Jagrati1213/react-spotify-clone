@@ -125,3 +125,9 @@ body {
 .recent_card:hover .recent_icon {
     opacity: 1;
 }
+
+/* Track page style */
+.short_track span.active {
+    color: white;
+    border-bottom: 1px solid whitesmoke;
+}
