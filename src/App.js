@@ -7,7 +7,8 @@ import { setClientToken } from './spotify';
 import { UserProfile } from './components/profile/UserProfile';
 import { Index } from './components/library/Index';
 import { Player } from './components/player/Player';
-import { Artist } from './components/artist/Artist';
+// import { Artist } from './components/artist/Artist';
+import Recent from './components/recentTracks/Recent';
 
 function App() {
 
@@ -46,10 +47,10 @@ function App() {
                   <LeftMenu />
 
                   <Routes>
-                    <Route path='/' element={<UserProfile />} />
+                    <Route path='/' element={<UserProfile token={token} />} />
                     <Route path='/playlist' element={<Index />} />
                     <Route path='/player' element={<Player />} />
-                    <Route path='/artist' element={<Artist />} />
+                    <Route path='/recent' element={<Recent />} />
                   </Routes>
                 </>
               )
