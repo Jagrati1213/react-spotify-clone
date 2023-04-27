@@ -6,7 +6,7 @@ function Banner() {
 
   const [userImg, setUserImg] = useState(profile);
   const [follower, setFollower] = useState(0);
-  const [following, setFollowing] = useState(0);
+//   const [following, setFollowing] = useState(0);
   const [playList, setPlayList] = useState(0);
   const [userName, setUserName] = useState('User Name');
   const [userUrl, setUserUrl] = useState('');
@@ -53,10 +53,10 @@ function Banner() {
                          <p className='text-[#848484]'>Followers</p>
                     </div>
 
-                    <div className="user_following text-center text-[17px]">
+                    {/* <div className="user_following text-center text-[17px]">
                          <span className='text-green-500'>{following}</span>
                          <p className='text-[#848484]'>Following</p>
-                    </div>
+                    </div> */}
 
                     <div className="user_playList text-center text-[17px]">
                          <span className='text-green-500'>{playList}</span>
