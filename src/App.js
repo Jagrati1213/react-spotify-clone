@@ -47,7 +47,7 @@ function App() {
                   <LeftMenu />
 
                   <Routes>
-                    <Route path='/' element={<UserProfile token={token} />} />
+                    <Route path='/' element={<UserProfile />} />
                     <Route path='/playlist' element={<Index />} />
                     <Route path='/player' element={<Player />} />
                     <Route path='/recent' element={<Recent />} />
