@@ -116,3 +116,12 @@ body {
     -webkit-appearance: none;
     appearance: none;
 }
+
+/* Recent page style */
+.recent_card .recent_icon {
+    opacity: 0;
+}
+
+.recent_card:hover .recent_icon {
+    opacity: 1;
+}
