@@ -9,7 +9,7 @@ import { Index } from './components/library/Index';
 import { Player } from './components/player/Player';
 // import { Artist } from './components/artist/Artist';
 import Recent from './components/recentTracks/Recent';
-import Track from './components/track/Track';
+import Toptrack from './components/topTrack/Toptrack';
 
 function App() {
 
@@ -52,7 +52,7 @@ function App() {
                     <Route path='/playlist' element={<Index />} />
                     <Route path='/player' element={<Player />} />
                     <Route path='/recent' element={<Recent />} />
-                    <Route path='/tracks' element={<Track />} />
+                    <Route path='/tracks' element={<Toptrack />} />
                   </Routes>
                 </>
               )
