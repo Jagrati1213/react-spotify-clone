@@ -10,6 +10,7 @@ import { Player } from './components/player/Player';
 // import { Artist } from './components/artist/Artist';
 import Recent from './components/recentTracks/Recent';
 import Toptrack from './components/topTrack/Toptrack';
+import PlaylistDetails from './components/playlistDetails/PlaylistDetails';
 
 function App() {
 
@@ -50,7 +51,7 @@ function App() {
                   <Routes>
                     <Route path='/' element={<UserProfile />} />
                     <Route path='/playlist' element={<Index />} />
-                    <Route path='/player' element={<Player />} />
+                    <Route path='/playlist/:id' element={<PlaylistDetails />} />
                     <Route path='/recent' element={<Recent />} />
                     <Route path='/tracks' element={<Toptrack />} />
                   </Routes>
