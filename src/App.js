@@ -30,7 +30,7 @@ function App() {
       // Set in localstorage
       window.localStorage.setItem('token', access_token);
       setToken(access_token);
-      setClientToken(access_token); //call the api function
+      setClientToken(access_token); //call the api login
     }
     else {
       setToken(token);
