@@ -18,7 +18,7 @@ function Toptrack() {
   },[range]);
 
   return (
-    <main className='track_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto mb-10 overflow-y-auto'>
+    <main className='track_container lg:w-[90%] md:w-10/12 w-full md:max-w-[100%] h-full min-h-screen md:p-18 p-8 pr-3 mx-auto mb-10 overflow-y-scroll ml-auto md:ml-20'>
       {
         tracks.length?
         (
@@ -26,13 +26,13 @@ function Toptrack() {
           <header className='flex justify-between items-center lg:flex-row flex-col'>
               <h1 className='text-white text-2xl font-bold my-3'>Top Tracks</h1>
               <div className='flex lg:justify-normal justify-between -mr-3 text-base font-semibold short_track'>
-                <span className={`mx-3 cursor-pointer text-[#848484] hover:text-white`} onClick={()=> ChangeActiveRange('long_term')}>
+                <span className={`mx-3 cursor-pointer text-[#848484] hover:text-white md:text-base text-sm`} onClick={()=> ChangeActiveRange('long_term')}>
                     All Time
                 </span>
-                <span className={`mx-3 cursor-pointer text-[#848484] hover:text-white`} onClick={()=> ChangeActiveRange('medium_term')}>
+                <span className={`mx-3 cursor-pointer text-[#848484] hover:text-white md:text-base text-sm`} onClick={()=> ChangeActiveRange('medium_term')}>
                       Last 6 Months
                 </span>
-                <span className={`mx-3 cursor-pointer text-[#848484] hover:text-white`} onClick={()=> ChangeActiveRange('short_term')}>
+                <span className={`mx-3 cursor-pointer text-[#848484] hover:text-white md:text-base text-sm`} onClick={()=> ChangeActiveRange('short_term')}>
                       Last 4 Weeks
                 </span>
               </div>

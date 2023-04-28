@@ -15,7 +15,7 @@ function PlaylistDetails() {
     },[listDetails]);
 
   return (
-    <main className='track_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto overflow-y-auto flex flex-col lg:flex-row items-start'>
+    <main className='playlist_d_container lg:w-[90%] md:w-10/12 w-full md:max-w-[100%] h-full min-h-screen md:p-18 p-8 mx-auto ml-0 md:ml-20 overflow-y-scroll flex flex-col lg:flex-row items-start'>
     {
       listDetails?.tracks?.items.length?
       (

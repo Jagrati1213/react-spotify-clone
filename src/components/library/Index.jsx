@@ -22,10 +22,11 @@ function Index() {
    
 
   return (
-    <div className='screen_container w-full max-w-[1400px] min-h-screen md:p-18 p-12 mx-auto mb-10 overflow-y-auto'>
+    <main className='screen_container lg:w-[90%] md:w-10/12 w-full md:max-w-[100%] h-full min-h-screen md:p-18 p-8 pr-3 mx-auto mb-10 overflow-y-scroll ml-auto md:ml-20'>
    {
      playList?
-     (<>
+     (
+        <>
             <h1 className='text-white text-2xl font-bold my-3 lg:mx-auto lg:text-left text-center'>Your PlayList</h1>
             <div className="library_body w-full h-full grid gap-7 flex-wrap justify-between">
             {
@@ -60,14 +61,15 @@ function Index() {
               })
             }
             </div>
-      </>):
+         </>
+     ):
      (
       <div className='screen_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto  overflow-y-auto'>
          <h1 className='text-white text-2xl font-bold my-3 mx-auto'>No track found</h1>
       </div> 
      )
    }
-   </div>
+   </main>
   )
 }
 
