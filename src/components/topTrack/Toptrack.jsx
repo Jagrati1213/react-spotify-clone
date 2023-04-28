@@ -23,9 +23,9 @@ function Toptrack() {
         tracks.length?
         (
           <>        
-          <header className='flex justify-between items-center'>
+          <header className='flex justify-between items-center lg:flex-row flex-col'>
               <h1 className='text-white text-2xl font-bold my-3'>Top Tracks</h1>
-              <div className='flex -mr-3 text-base font-semibold short_track'>
+              <div className='flex lg:justify-normal justify-between -mr-3 text-base font-semibold short_track'>
                 <span className={`mx-3 cursor-pointer text-[#848484] hover:text-white`} onClick={()=> ChangeActiveRange('long_term')}>
                     All Time
                 </span>
