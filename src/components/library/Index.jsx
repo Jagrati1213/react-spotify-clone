@@ -22,7 +22,7 @@ function Index() {
    
 
   return (
-    <div className='screen_container w-full max-w-[1400px] min-h-screen md:p-18 p-12 mx-auto  overflow-y-auto'>
+    <div className='screen_container w-full max-w-[1400px] min-h-screen md:p-18 p-12 mx-auto mb-10 overflow-y-auto'>
    {
      playList?
      (<>

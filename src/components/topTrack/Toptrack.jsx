@@ -18,7 +18,7 @@ function Toptrack() {
   },[range]);
 
   return (
-    <main className='track_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto overflow-y-auto'>
+    <main className='track_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto mb-10 overflow-y-auto'>
       {
         tracks.length?
         (

@@ -41,7 +41,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="App w-full h-screen overflow-hidden flex relative">
+        <div className="App w-full min-h-screen overflow-hidden flex relative lg:flex-row flex-col-reverse">
           {
             !token ? (<Login />) :
               (

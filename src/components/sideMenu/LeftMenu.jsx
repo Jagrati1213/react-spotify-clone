@@ -7,10 +7,10 @@ function LeftMenu() {
 
   return (
 
-    <main className='leftMenu bg-black h-full min-h-screen w-20 min-w-[64px]  py-6 overflow-hidden flex justify-between flex-col  top-0 left-0'>
+    <main className='fixed leftMenu bg-black md:h-full md:min-h-screen md:w-20 w-full min-w-[64px]  md:py-6 overflow-hidden flex justify-between flex-col  left-0 z-40'>
 
       {/* Logo */}
-       <div className="logo-container text-green-500 flex items-center justify-center">
+       <div className="logo-container text-green-500 md:flex items-center justify-center hidden">
           <i className='md:text-5xl text-4xl'><FaSpotify/></i>
        </div>
 
@@ -18,7 +18,7 @@ function LeftMenu() {
        <Menu/>
 
       {/* Add github icon */}
-       <div className='text-[#848484] hover:text-blue-400 flex justify-center items-center mb-6 cursor-pointer'>
+       <div className='text-[#848484] hover:text-blue-400 md:flex justify-center items-center mb-6 cursor-pointer hidden'>
           <IconContext.Provider value={{size:'35px',className:'btn-icon'}}><i><FaGithub/></i></IconContext.Provider>
        </div>
        

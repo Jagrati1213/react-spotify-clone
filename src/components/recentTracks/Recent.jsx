@@ -12,7 +12,7 @@ function Recent(){
    },[]);
 
   return (
-        <div className='screen_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto overflow-y-auto'>
+    <div className='screen_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto mb-10 overflow-y-auto'>
         {recentTracks.length?
             (<>
               <h1 className='text-white text-2xl font-bold mb-3 lg:mx-auto lg:text-left text-center'>Recently Played Tracks</h1>

@@ -38,7 +38,7 @@ function Banner() {
           {/* Profile Image */}
           <div className="profile_container flex flex-col justify-center items-center">
 
-               <div className="profile lg:w-40 lg:h-40 w-32 h-32 bg-gray-700 rounded-full flex items-center">
+               <div className="profile md:w-40 md:h-40 w-32 h-32 bg-gray-700 rounded-full flex items-center">
                  <img src={userImg} alt="Me" className='rounded-full' />
                </div>
 
@@ -46,13 +46,13 @@ function Banner() {
                   <h1 className='text-white hover:text-green-500 cursor-pointer lg:text-5xl sm:text-4xl text-2xl font-bold my-4'>{userName}</h1>
                </a>
 
-               <div className="user_social grid grid-cols-2 gap-8 mt-5 font-semibold" style={{letterSpacing:'.3px'}}>
+               <div className="user_social grid grid-cols-2 gap-5 md:gap-8 mt-5 font-semibold" style={{letterSpacing:'.3px'}}>
 
-                    <div className="user_follower text-center text-[17px]">
+                    <div className="user_follower text-center sm:text-[17px] text-sm">
                          <span className='text-green-500'>{follower}</span>
                          <p className='text-[#848484]'>Followers</p>
                     </div>
-                    <div className="user_playList text-center text-[17px]">
+                    <div className="user_playList text-center sm:text-[17px] text-sm">
                          <span className='text-green-500'>{playList}</span>
                          <p className='text-[#848484]'>Playlist</p>
                     </div>

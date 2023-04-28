@@ -10,8 +10,8 @@ function Menu() {
 
   return (
         // Menu container
-        <div className='menuContainer my-4'>
-            <ul className='w-full p-0'>
+        <div className='menuContainer md::my-4'>
+            <ul className='w-full p-0 md:block flex'>
                 {/* Render MenuList */}
                 <MenuList url='/' title='Profile' icon={<GoPerson/>}/>
                 <MenuList url='/albums' title='Albums' icon={<IoIosAlbums/>}/>

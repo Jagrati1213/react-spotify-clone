@@ -15,7 +15,7 @@ function MenuList({url,icon,title}){
 
             <IconContext.Provider value={{size:'20px',className:'btn-icon'}}>
                 <i className='text-xl'>{icon}</i>
-                <span className='inline mt-1'>{title}</span>
+                <span className='mt-1 md:inline hidden'>{title}</span>
             </IconContext.Provider>
                                
         </Link>
