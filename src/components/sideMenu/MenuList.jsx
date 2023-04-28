@@ -1,11 +1,6 @@
 import React from 'react';
 import { IconContext } from 'react-icons/lib';
 import { Link, useLocation } from 'react-router-dom';
-import { TbMicrophone2,TbPlayerPlayFilled} from 'react-icons/tb';
-import { GoPerson } from 'react-icons/go'
-import {RxTimer} from 'react-icons/rx'
-import {BsMusicNoteList} from 'react-icons/bs'
-import {FaHeart,FaThList} from 'react-icons/fa'
 
 function MenuList({url,icon,title}){
 

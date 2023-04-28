@@ -6,11 +6,11 @@ import Login from './components/auth/Login';
 import { setClientToken } from './spotify';
 import { UserProfile } from './components/profile/UserProfile';
 import { Index } from './components/library/Index';
-import { Player } from './components/player/Player';
-// import { Artist } from './components/artist/Artist';
 import Recent from './components/recentTracks/Recent';
 import Toptrack from './components/topTrack/Toptrack';
-import PlaylistDetails from './components/playlistDetails/PlaylistDetails';
+import PlaylistDetails from './components/library/PlaylistDetails';
+import Album from './components/album/Album';
+import { AlbumDetails } from './components/album/AlbumDetails';
 
 function App() {
 
@@ -52,8 +52,11 @@ function App() {
                     <Route path='/' element={<UserProfile />} />
                     <Route path='/playlist' element={<Index />} />
                     <Route path='/playlist/:id' element={<PlaylistDetails />} />
+                    <Route path='/albums/:id' element={<AlbumDetails />} />
                     <Route path='/recent' element={<Recent />} />
                     <Route path='/tracks' element={<Toptrack />} />
+                    <Route path='/albums' element={<Album />} />
+
                   </Routes>
                 </>
               )
