@@ -46,24 +46,19 @@ function Banner() {
                   <h1 className='text-white hover:text-green-500 cursor-pointer md:text-5xl text-4xl font-bold my-4'>{userName}</h1>
                </a>
 
-               <div className="user_social grid grid-cols-3 gap-8 mt-5 font-semibold" style={{letterSpacing:'.3px'}}>
+               <div className="user_social grid grid-cols-2 gap-8 mt-5 font-semibold" style={{letterSpacing:'.3px'}}>
 
                     <div className="user_follower text-center text-[17px]">
                          <span className='text-green-500'>{follower}</span>
                          <p className='text-[#848484]'>Followers</p>
                     </div>
-
-                    {/* <div className="user_following text-center text-[17px]">
-                         <span className='text-green-500'>{following}</span>
-                         <p className='text-[#848484]'>Following</p>
-                    </div> */}
-
                     <div className="user_playList text-center text-[17px]">
                          <span className='text-green-500'>{playList}</span>
                          <p className='text-[#848484]'>Playlist</p>
                     </div>
                </div>
 
+               {/* panding */}
                <button className='rounded-full my-5 px-6 py-2 border-2 border-white text-white  hover:text-black hover:bg-white cursor-pointer'>LOGOUT</button>
           </div>
 
