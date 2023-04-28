@@ -4,7 +4,7 @@ import Banner from './Banner';
 function UserProfile() {
 
   return (
-    <div className='UserProfile h-full bg-black flex-grow'>
+    <div className='UserProfile flex-grow'>
         <Banner/>
     </div>
   )
