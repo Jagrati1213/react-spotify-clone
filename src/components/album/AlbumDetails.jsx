@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import { apiClient } from "../../spotify";
 import { useLocation } from 'react-router';
 import Track from '../tracks/Track';
+import Loader from '../loader/Loader';
 
 function AlbumDetails() {
 
@@ -16,14 +17,12 @@ function AlbumDetails() {
   return (
     <div className='screen_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto  overflow-y-auto'>
         {
-            albumTracks?
+            albumTracks.length?
             (
                 albumTracks.map((item,id)=> <Track tracks={item} key={id}/>)
             ):
             (
-            <div className='screen_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto  overflow-y-auto'>
-                <h1 className='text-white text-2xl font-bold my-3 mx-auto'>No track found</h1>
-            </div>
+           <Loader/>
             )
         }
     </div>

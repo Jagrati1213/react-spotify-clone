@@ -4,6 +4,7 @@ import {FaMusic} from 'react-icons/fa'
 import { IconContext } from 'react-icons';
 import {AiFillPlayCircle} from 'react-icons/ai';
 import { useNavigate } from 'react-router';
+import Loader from '../loader/Loader'
 
 
 function Index() {
@@ -23,12 +24,13 @@ function Index() {
 
   return (
     <main className='screen_container lg:w-[90%] md:w-10/12 w-full md:max-w-[100%] h-full min-h-screen md:p-18 p-8 pr-3 mx-auto mb-10 overflow-y-scroll ml-auto md:ml-20'>
+         <h1 className='text-white text-2xl font-bold my-3 lg:mx-auto lg:text-left text-center'>Your PlayList</h1>
+
    {
-     playList?
+     playList.length?
      (
         <>
-            <h1 className='text-white text-2xl font-bold my-3 lg:mx-auto lg:text-left text-center'>Your PlayList</h1>
-            <div className="library_body w-full h-full grid gap-7 flex-wrap justify-between">
+         <div className="library_body w-full h-full grid gap-7 flex-wrap justify-between">
             {
               playList.map((item)=>{
                   return <div className='playlist_card rounded-md text-white flex flex-col text-center my-3' key={item.id}
@@ -64,9 +66,7 @@ function Index() {
          </>
      ):
      (
-      <div className='screen_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto  overflow-y-auto'>
-         <h1 className='text-white text-2xl font-bold my-3 mx-auto'>No track found</h1>
-      </div> 
+     <Loader/>
      )
    }
    </main>

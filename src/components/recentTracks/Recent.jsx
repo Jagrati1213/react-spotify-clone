@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { apiClient } from "../../spotify";
 import Track from '../tracks/Track';
+import Loader from '../loader/Loader';
 
 function Recent(){
 
@@ -13,19 +14,18 @@ function Recent(){
 
   return (
     <div className='screen_container lg:w-[90%] md:w-10/12 w-full md:max-w-[100%] h-full min-h-screen md:p-18 p-8 pr-3 mx-auto mb-10 overflow-y-scroll ml-auto md:ml-20'>
+      <h1 className='text-white text-2xl font-bold mb-3 lg:mx-auto lg:text-left text-center'>Recently Played Tracks</h1>
+
         {recentTracks.length?
-            (<>
-              <h1 className='text-white text-2xl font-bold mb-3 lg:mx-auto lg:text-left text-center'>Recently Played Tracks</h1>
-            
+            (<>            
               <ul className="recent_body w-full flex flex-col mt-10">
                 {/* Mapping recent tracks */}
                 {recentTracks.map((item,id)=> <Track tracks={item.track} key={id}/>)}
               </ul>
               </>
             ):
-            (<div className='screen_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto  overflow-y-auto'>
-                <h1 className='text-white text-2xl font-bold my-3 mx-auto'>No track found</h1>
-             </div>
+            (
+            <Loader/>
             )
         }
     </div>
