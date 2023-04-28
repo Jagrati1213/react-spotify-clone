@@ -15,9 +15,9 @@ function Recent(){
         <div className='screen_container w-full max-w-[1400px] h-full min-h-screen md:p-18 p-12 mx-auto overflow-y-auto'>
         {recentTracks.length?
             (<>
-              <h1 className='text-white text-2xl font-bold my-3 mx-auto'>Recently Played Tracks</h1>
+              <h1 className='text-white text-2xl font-bold mb-3 mx-auto'>Recently Played Tracks</h1>
             
-              <ul className="recent_body w-full h-full flex flex-col mt-10">
+              <ul className="recent_body w-full flex flex-col mt-10">
                 {/* Mapping recent tracks */}
                 {recentTracks.map((item,id)=> <Track tracks={item.track} key={id}/>)}
               </ul>
