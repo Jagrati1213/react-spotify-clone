@@ -16,7 +16,7 @@ function PlaylistDetails() {
     },[listDetails]);
 
   return (
-    <main className='playlist_d_container lg:w-[90%] md:w-10/12 w-full md:max-w-[100%] h-full min-h-screen md:p-18 p-8 mx-auto ml-0 md:ml-20 overflow-y-scroll flex flex-col lg:flex-row items-start'>
+    <main className='playlist_d_container lg:w-[90%] md:w-10/12 w-full md:max-w-[100%] h-full min-h-screen md:p-18 p-8 mx-auto ml-0 md:ml-20 overflow-y-scroll flex flex-col lg:flex-row items-start mt-12'>
     {
       listDetails?.tracks?.items.length?
       (

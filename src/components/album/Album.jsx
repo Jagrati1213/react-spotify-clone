@@ -19,7 +19,7 @@ function Album() {
      },[albums]);
   
   return (
-        <main className='screen_container lg:w-[90%] md:w-10/12 w-full max-w-[100%] min-h-screen md:p-18 p-8 mx-auto overflow-y-scroll ml-auto md:ml-20'>
+        <main className='screen_container lg:w-[90%] md:w-10/12 w-full max-w-[100%] min-h-screen md:p-18 p-8 mx-auto overflow-y-scroll ml-auto md:ml-20 mt-12'>
                 <h1 className='text-white text-2xl font-bold my-3 mx-auto lg:text-left text-center'>Your album</h1>
 
                 {albums.length?
