@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { LeftMenu } from './components/sideMenu/LeftMenu';
 import Login from './components/auth/Login';
-import { setClientToken } from './spotify';
+import { setClientToken, getLocalAccessToken, setLocalAccessToken } from './spotify';
 import { UserProfile } from './components/profile/UserProfile';
 import { Index } from './components/library/Index';
 import Recent from './components/recentTracks/Recent';
@@ -15,11 +15,13 @@ import { AlbumDetails } from './components/album/AlbumDetails';
 function App() {
 
   // create token
-  const [token, setToken] = useState('');
+  const [accesstoken, setAccessToken] = useState('');
 
   useEffect(() => {
 
-    const token = window.localStorage.getItem('token');
+    // const token = window.localStorage.getItem('token');
+    const token = getLocalAccessToken();
+
     // To get the window location from #
     const hash = window.location.hash;
     window.location.hash = '';
@@ -28,12 +30,14 @@ function App() {
       //get the access token
       const access_token = hash.split('&')[0].split('=')[1];
       // Set in localstorage
-      window.localStorage.setItem('token', access_token);
-      setToken(access_token);
+      // window.localStorage.setItem('token', access_token);
+      setLocalAccessToken(access_token);
+
+      setAccessToken(access_token);
       setClientToken(access_token); //call the api login
     }
     else {
-      setToken(token);
+      setAccessToken(token);
       setClientToken(token);
     }
   }, []);
@@ -43,7 +47,7 @@ function App() {
       <Router>
         <div className="App w-full min-h-screen overflow-hidden flex relative lg:flex-row flex-col-reverse">
           {
-            !token ? (<Login />) :
+            !accesstoken ? (<Login />) :
               (
                 <>
                   <LeftMenu />
