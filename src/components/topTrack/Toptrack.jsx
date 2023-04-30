@@ -16,7 +16,6 @@ function Toptrack() {
  
   useEffect(()=>{
     apiClient.get(`me/top/tracks?limit=50&time_range=${range}`).then((res)=> setTracks(res.data.items));
-
   },[range]);
 
   return (
