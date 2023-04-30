@@ -2,6 +2,7 @@ import React from 'react';
 import {BiErrorCircle} from "react-icons/bi";
 import { IconContext } from 'react-icons';
 import trackImg from '../../images/track.png';
+import '../../style/Track.css';
 
 
 function Track({tracks}) {

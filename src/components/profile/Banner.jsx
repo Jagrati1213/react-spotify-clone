@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { apiClient, setClientToken } from '../../spotify';
+import { apiClient } from '../../spotify';
 import profile from '../../images/profile.png';
+import { logout } from '../../spotify';
 
 function Banner() {
 
@@ -58,7 +59,7 @@ function Banner() {
                </div>
 
                {/* panding */}
-               <button className='rounded-full my-10 px-6 py-2 border-2 border-white text-white hover:text-black hover:bg-white cursor-pointer'>LOGOUT</button>
+               <button className='rounded-full my-10 px-6 py-2 border-2 border-white text-white hover:text-black hover:bg-white cursor-pointer' onClick={logout}>Logout</button>
           </div>
 
     </div>

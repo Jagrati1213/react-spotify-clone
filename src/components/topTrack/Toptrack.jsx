@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { apiClient } from "../../spotify";
 import Track from '../tracks/Track';
 import Loader from '../loader/Loader';
+import '../../style/Toptrack.css';
 
 function Toptrack() {
 

@@ -1,0 +1,25 @@
+.artist_container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media only screen and (max-width: 765px) {
+    .artist_container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .artist_container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+.playlist_card:hover .playlist_fade {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.playlist_fade {
+    opacity: 0;
+    transition: all .2s linear;
+}

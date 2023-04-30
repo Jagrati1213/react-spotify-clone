@@ -1,7 +1,8 @@
 import React from 'react';
-import { FaSpotify,FaEllipsisH,FaSearch ,FaGithub} from "react-icons/fa";
+import { FaSpotify,FaGithub} from "react-icons/fa";
 import { Menu } from './Menu';
 import { IconContext } from 'react-icons';
+import '../../style/LeftMenu.css';
 
 function LeftMenu() {
 

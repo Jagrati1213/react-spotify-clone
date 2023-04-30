@@ -5,6 +5,7 @@ import { IconContext } from 'react-icons';
 import {AiFillPlayCircle} from 'react-icons/ai';
 import { useNavigate } from 'react-router';
 import Loader from '../loader/Loader';
+import '../../style/Album.css';
 
 function Album() {
     const [albums,setAlbums] = useState([]);

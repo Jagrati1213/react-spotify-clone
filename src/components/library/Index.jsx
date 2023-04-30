@@ -4,7 +4,9 @@ import {FaMusic} from 'react-icons/fa'
 import { IconContext } from 'react-icons';
 import {AiFillPlayCircle} from 'react-icons/ai';
 import { useNavigate } from 'react-router';
-import Loader from '../loader/Loader'
+import Loader from '../loader/Loader';
+import '../../style/Library.css';
+
 
 
 function Index() {
@@ -13,7 +15,7 @@ function Index() {
 
   useEffect(()=>{
     apiClient.get('me/playlists').then(res => setPlayList(res.data.items));
-   },[]);
+   },[playList]);
 
    const navigate = useNavigate();
 
@@ -62,7 +64,7 @@ function Index() {
                   </div>
               })
             }
-            </div>
+         </div>
          </>
      ):
      (
