@@ -11,6 +11,7 @@ import Toptrack from './components/topTrack/Toptrack';
 import PlaylistDetails from './components/library/PlaylistDetails';
 import Album from './components/album/Album';
 import { AlbumDetails } from './components/album/AlbumDetails';
+import HistoryArrows from './components/HistoryArrows';
 
 function App() {
 
@@ -45,13 +46,13 @@ function App() {
   return (
     <>
       <Router>
-        <div className="App w-full min-h-screen overflow-hidden flex relative lg:flex-row flex-col-reverse">
+        <div className="App w-full min-h-screen overflow-hidden flex relative lg:flex-row flex-col-reverse ">
           {
             !accesstoken ? (<Login />) :
               (
                 <>
+                  <HistoryArrows />
                   <LeftMenu />
-
                   <Routes>
                     <Route path='/' element={<UserProfile />} />
                     <Route path='/playlist' element={<Index />} />
