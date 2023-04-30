@@ -30,7 +30,6 @@ function PlaylistDetails() {
             </a>
             <p className='text-[#848484] text-sm font-semibold'>By {listDetails?.owner?.display_name}</p>
             <p className='text-white my-6 text-[14px]'>{listDetails?.tracks?.total} Tracks</p>
-            <button className='bg-green-600 text-white px-6 py-2 rounded-full cursor-pointer hover:bg-green-500'>Get Recommendation</button>
         </div>
 
         <ul className="recent_body w-full flex flex-col my-10 pb-10 lg:ml-12">
