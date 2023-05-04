@@ -12,11 +12,15 @@ import PlaylistDetails from './components/library/PlaylistDetails';
 import Album from './components/album/Album';
 import { AlbumDetails } from './components/album/AlbumDetails';
 import HistoryArrows from './components/HistoryArrows';
+import SpotifyWebApi from 'spotify-web-api-js';
+
+const spotify = new SpotifyWebApi();
 
 function App() {
 
   // create token
   const [accesstoken, setAccessToken] = useState('');
+
 
   useEffect(() => {
 
@@ -36,6 +40,7 @@ function App() {
 
       setAccessToken(access_token);
       setClientToken(access_token); //call the api login
+      spotify.setAccessToken(access_token);
     }
     else {
       setAccessToken(token);
