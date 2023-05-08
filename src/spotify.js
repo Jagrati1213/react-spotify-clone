@@ -18,7 +18,6 @@ export const apiClient = axios.create({
 
 // set token
 export const setLocalAccessToken = (token) => {
-    setTokenTimestamp();
     window.localStorage.setItem('access_token', token);
 };
 
