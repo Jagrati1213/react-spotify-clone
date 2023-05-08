@@ -6,7 +6,7 @@ function MenuList({url,icon,title}){
 
     // add active class in menu
      const location =  useLocation();
-     const isActive = location.pathname == url;
+     const isActive = location.pathname === url;
      const btnClass = isActive ? 'active':'';
 
     return(

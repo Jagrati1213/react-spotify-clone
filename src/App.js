@@ -53,8 +53,7 @@ function App() {
       <Router>
         <div className="App w-full min-h-screen overflow-hidden flex relative lg:flex-row flex-col-reverse ">
           {
-            // !accesstoken ? (<Login />) : 'soosisisi'
-            !accesstoken ? 'soosisisi' :
+            !accesstoken ? (<Login />) :
               (
                 <>
                   <HistoryArrows />

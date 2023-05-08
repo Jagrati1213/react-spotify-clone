@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-sopity-clone/static/css/main.df4cd6fb.css",
-    "main.js": "/react-sopity-clone/static/js/main.95e39946.js",
-    "static/media/profile.png": "/react-sopity-clone/static/media/profile.ffb81c233192a47e8e68.png",
-    "static/media/track.png": "/react-sopity-clone/static/media/track.7c7d44966c3beadf22ec.png",
-    "index.html": "/react-sopity-clone/index.html",
-    "main.df4cd6fb.css.map": "/react-sopity-clone/static/css/main.df4cd6fb.css.map",
-    "main.95e39946.js.map": "/react-sopity-clone/static/js/main.95e39946.js.map"
+    "main.css": "./static/css/main.df4cd6fb.css",
+    "main.js": "./static/js/main.7c702c38.js",
+    "static/media/profile.png": "./static/media/profile.ffb81c233192a47e8e68.png",
+    "static/media/track.png": "./static/media/track.7c7d44966c3beadf22ec.png",
+    "index.html": "./index.html",
+    "main.df4cd6fb.css.map": "./static/css/main.df4cd6fb.css.map",
+    "main.7c702c38.js.map": "./static/js/main.7c702c38.js.map"
   },
   "entrypoints": [
     "static/css/main.df4cd6fb.css",
-    "static/js/main.95e39946.js"
+    "static/js/main.7c702c38.js"
   ]
 }
