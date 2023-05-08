@@ -15,11 +15,6 @@ export const apiClient = axios.create({
     baseURL: 'https://api.spotify.com/v1/',
 });
 
-// TOKENS 
-const expiring_time = 3600 * 1000; // 3600 seconds * 1000 = 1 hour in milliseconds
-
-// set timing
-const setTokenTimestamp = () => window.localStorage.setItem('token_timestamp', Date.now());
 
 // set token
 export const setLocalAccessToken = (token) => {
@@ -27,13 +22,8 @@ export const setLocalAccessToken = (token) => {
     window.localStorage.setItem('access_token', token);
 };
 
-// set refresh token
-// const setLocalRefreshToken = token => window.localStorage.setItem('refresh_token', token);
-
 // get tokens
-const getTokenTimestamp = () => window.localStorage.getItem('token_timestamp');
 export const getLocalAccessToken = () => window.localStorage.getItem('access_token');
-// const getLocalRefreshToken = () => window.localStorage.getItem('refresh_token');
 
 
 // declared method for api
@@ -47,6 +37,5 @@ export const setClientToken = (token) => {
 export const logout = () => {
     window.localStorage.removeItem('token_timestamp');
     window.localStorage.removeItem('access_token');
-    // window.localStorage.removeItem('refresh_token');
     window.location.reload();
 };
