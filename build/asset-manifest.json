@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-sopity-clone/static/css/main.df4cd6fb.css",
-    "main.js": "/react-sopity-clone/static/js/main.122eb259.js",
+    "main.js": "/react-sopity-clone/static/js/main.17efbaed.js",
     "static/media/profile.png": "/react-sopity-clone/static/media/profile.ffb81c233192a47e8e68.png",
     "static/media/track.png": "/react-sopity-clone/static/media/track.7c7d44966c3beadf22ec.png",
     "index.html": "/react-sopity-clone/index.html",
     "main.df4cd6fb.css.map": "/react-sopity-clone/static/css/main.df4cd6fb.css.map",
-    "main.122eb259.js.map": "/react-sopity-clone/static/js/main.122eb259.js.map"
+    "main.17efbaed.js.map": "/react-sopity-clone/static/js/main.17efbaed.js.map"
   },
   "entrypoints": [
     "static/css/main.df4cd6fb.css",
-    "static/js/main.122eb259.js"
+    "static/js/main.17efbaed.js"
   ]
 }
