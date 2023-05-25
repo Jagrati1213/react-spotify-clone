@@ -1,5 +1,5 @@
 /* Track page style */
 .short_track span.active {
-    color: white;
-    border-bottom: 1px solid whitesmoke;
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
 }

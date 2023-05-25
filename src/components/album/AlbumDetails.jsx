@@ -11,7 +11,7 @@ function AlbumDetails() {
     const location = useLocation();
     useEffect(()=>{
         if(location.state){
-            apiClient.get(`albums/${location?.state?.id}/tracks`).then(res => setAlbumsTracks(res.data.items));
+            apiClient.get(`albums/${location?.state?.id}/tracks`).then(res => setAlbumsTracks(res.data.items)).catch((err)=>console.log(err));
         }
   },[albumTracks]);
   return (

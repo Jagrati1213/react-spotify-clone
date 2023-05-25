@@ -28,7 +28,7 @@ function Banner() {
     });
     
     //set playlist
-    apiClient.get('me/playlists').then(res => setPlayList(res.data.items.length));
+    apiClient.get('me/playlists').then(res => setPlayList(res.data.items.length)).catch((err)=>console.log(err));
 
     
   },[]);
@@ -38,28 +38,28 @@ function Banner() {
           {/* Profile Image */}
           <div className="profile_container flex flex-col justify-center items-center">
 
-               <div className="profile md:w-40 md:h-40 w-32 h-32 bg-zinc-800 rounded-full flex items-center">
+               <div className="profile md:w-40 md:h-40 w-32 h-32 bg-t_black rounded-full flex items-center">
                  <img src={userImg} alt="Me" className='rounded-full' />
                </div>
 
                <a href={userUrl} target="_blank">
-                  <h1 className='text-white hover:text-green-500 cursor-pointer lg:text-5xl sm:text-4xl text-2xl font-bold my-4'>{userName}</h1>
+                  <h1 className='text-t_white hover:text-t_green cursor-pointer lg:text-5xl sm:text-4xl text-2xl font-bold my-4'>{userName}</h1>
                </a>
 
                <div className="user_social grid grid-cols-2 gap-5 md:gap-8 mt-5 font-semibold" style={{letterSpacing:'.3px'}}>
 
                     <div className="user_follower text-center sm:text-[17px] text-sm">
-                         <span className='text-green-500'>{follower}</span>
-                         <p className='text-[#848484]'>Followers</p>
+                         <span className='text-t_green'>{follower}</span>
+                         <p className='text-t_white'>Followers</p>
                     </div>
                     <div className="user_playList text-center sm:text-[17px] text-sm">
-                         <span className='text-green-500'>{playList}</span>
-                         <p className='text-[#848484]'>Playlist</p>
+                         <span className='text-t_green'>{playList}</span>
+                         <p className='text-t_white'>Playlist</p>
                     </div>
                </div>
 
                {/* panding */}
-               <button className='rounded-full my-10 px-6 py-2 border-2 border-white text-white hover:text-black hover:bg-white cursor-pointer' onClick={logout}>Logout</button>
+               <button className='rounded-full my-10 px-6 py-2 border-2 border-t_white text-t_white hover:bg-t_green hover:border-t_green cursor-pointer' onClick={logout}>Logout</button>
           </div>
 
     </div>

@@ -25,11 +25,11 @@ function PlaylistDetails() {
             <div className="playlist_img lg:block hidden w-full max-w-xs">
                 <img src={listDetails?.images[0].url} alt="playlist_img" className='w-full object-cover'/>
             </div>
-            <a href={listDetails?.external_urls?.spotify} target='_blank' rel="noopener noreferrer" className='my-4 text-white text-center font-bold text-xl'>
+            <a href={listDetails?.external_urls?.spotify} target='_blank' rel="noopener noreferrer" className='my-4 text-t_white text-center font-bold text-xl'>
                 <h3>{listDetails?.name}</h3>
             </a>
             <p className='text-[#848484] text-sm font-semibold'>By {listDetails?.owner?.display_name}</p>
-            <p className='text-white my-6 text-[14px]'>{listDetails?.tracks?.total} Tracks</p>
+            <p className='text-t_white my-6 text-[14px]'>{listDetails?.tracks?.total} Tracks</p>
         </div>
 
         <ul className="recent_body w-full flex flex-col my-10 pb-10 lg:ml-12">

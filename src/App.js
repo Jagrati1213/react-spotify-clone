@@ -34,10 +34,9 @@ function App() {
     if (!token && hash) {
       //get the access token
       const access_token = hash.split('&')[0].split('=')[1];
-      // Set in localstorage
-      // window.localStorage.setItem('token', access_token);
-      setLocalAccessToken(access_token);
 
+      // Set in localstorage
+      setLocalAccessToken(access_token);
       setAccessToken(access_token);
       setClientToken(access_token); //call the api login
       spotify.setAccessToken(access_token);
@@ -66,12 +65,10 @@ function App() {
                     <Route path='/recent' element={<Recent />} />
                     <Route path='/tracks' element={<Toptrack />} />
                     <Route path='/albums' element={<Album />} />
-
                   </Routes>
                 </>
               )
           }
-
         </div>
       </Router>
     </>
