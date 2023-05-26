@@ -1,10 +1,10 @@
 import axios from "axios";
 
-// access variables from spotify api App
+//____Access variables from spotify-api 
 const authEndpoint = 'https://accounts.spotify.com/authorize?';
 const clientID = '6c7bb4c9478241c1bd4683c732dbe9aa';
-const redirectUri = 'http://localhost:3000';
-// const redirectUri = 'https://react-js-spotify.netlify.app';
+// const redirectUri = 'http://localhost:3000';
+const redirectUri = 'https://react-spotify-clone-one.vercel.app';
 const scopes = ['user-library-read', 'playlist-read-private', 'user-read-recently-played', 'user-top-read'];
 
 // Link for spotify api login
