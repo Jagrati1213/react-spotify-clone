@@ -20,7 +20,9 @@ function LeftMenu() {
 
       {/* Add github icon */}
        <div className='text-t_white hover:text-t_green md:flex justify-center items-center mb-6 cursor-pointer hidden'>
+        <a href="https://github.com/Jagrati1213/react-spotify-clone" target='_blank'>
           <IconContext.Provider value={{size:'35px',className:'btn-icon'}}><i><FaGithub/></i></IconContext.Provider>
+        </a>
        </div>
        
     </main>   
