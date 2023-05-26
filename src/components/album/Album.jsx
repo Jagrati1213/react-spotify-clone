@@ -16,7 +16,8 @@ function Album() {
         .then(res =>{ 
             setAlbums(res.data?.items);
             controller = null;
-        }).catch((err)=>{console.log(err)});
+        })
+        .catch((err)=> console.error(err));
 
         return () => controller?.abort();
 
