@@ -5,7 +5,7 @@ import { LeftMenu } from './components/sideMenu/LeftMenu';
 import Login from './components/auth/Login';
 import { setClientToken, getLocalAccessToken, setLocalAccessToken } from './spotify';
 import { UserProfile } from './components/profile/UserProfile';
-import { Index } from './components/library/Index';
+import { Libarary } from './components/library/Libarary';
 import Recent from './components/recentTracks/Recent';
 import Toptrack from './components/topTrack/Toptrack';
 import PlaylistDetails from './components/library/PlaylistDetails';
@@ -59,9 +59,9 @@ function App() {
                   <LeftMenu />
                   <Routes>
                     <Route path='/' element={<UserProfile />} />
-                    <Route path='/playlist' element={<Index />} />
-                    <Route path='/playlist/:id' element={<PlaylistDetails />} />
-                    <Route path='/albums/:id' element={<AlbumDetails />} />
+                    <Route path='/playlist' element={<Libarary />} />
+                    <Route path='/playlist/:productId' element={<PlaylistDetails />} />
+                    <Route path='/albums/:albumId' element={<AlbumDetails />} />
                     <Route path='/recent' element={<Recent />} />
                     <Route path='/tracks' element={<Toptrack />} />
                     <Route path='/albums' element={<Album />} />
