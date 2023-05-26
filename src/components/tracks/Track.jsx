@@ -1,5 +1,5 @@
 import React from 'react';
-import trackImg from '../../images/track.png';
+// import trackImg from '../../images/track.png';
 import '../../style/Track.css';
 
 
@@ -24,7 +24,7 @@ function Track({tracks}) {
                     {
                     tracks?.album?.images.length>0?
                             (<img src={tracks.album.images[0].url} alt="track_img"  className='w-full max-w-screen'/>):
-                            (<img src={trackImg} alt="track_img"  className='w-full max-w-screen'/>)
+                            (<img src='https://i.pinimg.com/originals/82/9d/2c/829d2cbfafe994ba186b97f8ea0d4b4c.png' alt="track_img"  className='w-full max-w-screen'/>)
                     }   
                 </div>
             </div>

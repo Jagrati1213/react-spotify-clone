@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import { apiClient } from "../../spotify";
-import { useLocation, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import Track from '../tracks/Track';
 import Loader from '../loader/Loader';
 
