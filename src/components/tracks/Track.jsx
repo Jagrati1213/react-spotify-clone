@@ -22,7 +22,7 @@ function Track({tracks}) {
             <div>
                 <div className='recent_img w-12 max-w-[50px] mr-5 relative cursor-pointer'>
                     {
-                    tracks?.album?.images.length?
+                    tracks?.album?.images.length>0?
                             (<img src={tracks.album.images[0].url} alt="track_img"  className='w-full max-w-screen'/>):
                             (<img src={trackImg} alt="track_img"  className='w-full max-w-screen'/>)
                     }   
