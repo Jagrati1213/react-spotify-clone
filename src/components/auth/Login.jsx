@@ -5,7 +5,7 @@ import {FaSpotify} from 'react-icons/fa'
 function Login() {
     return (
         <div className='w-full h-screen bg-t_black text-t_white flex justify-center items-center flex-col'>
-            <h1 className='text-2xl md:text-4xl font-bold my-8 flex items-center underline'> 
+            <h1 className='text-2xl md:text-4xl font-bold my-8 flex items-center'> 
              <i className='text-t_green mr-2'><FaSpotify/></i>
             Spotify Login</h1>
 
