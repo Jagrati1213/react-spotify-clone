@@ -42,7 +42,7 @@ function Banner() {
                  <img src={userImg} alt="Me" className='rounded-full' />
                </div>
 
-               <a href={userUrl} target="_blank">
+               <a href={userUrl} target="_blank" rel="noreferrer">
                   <h1 className='text-t_white hover:text-t_green cursor-pointer lg:text-5xl sm:text-4xl text-2xl font-bold my-4'>{userName}</h1>
                </a>
 
