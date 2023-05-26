@@ -12,9 +12,19 @@ function Toptrack() {
   const ChangeActiveRange = (rangeName) =>{
     setRange(rangeName);
   }
- 
+
   useEffect(()=>{
-    apiClient.get(`me/top/tracks?limit=50&time_range=${range}`).then((res)=> setTracks(res.data.items)).catch((err)=>{console.log(err)})
+
+    let controller = new AbortController();
+    
+    apiClient.get(`me/top/tracks?limit=50&time_range=${range}`)
+    .then((res)=> {
+       setTracks(res.data.items);
+       controller = null;
+      })
+    .catch((err)=> console.error(err));
+
+    return ()=> controller?.abort();
   },[range]);
 
   return (

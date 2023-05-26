@@ -10,12 +10,15 @@ function Libarary() {
   const [playList,setPlayList] = useState([]);
 
   useEffect(()=>{
+
       let controller = new AbortController();
+      
       apiClient.get('me/playlists')
       .then(res =>{ 
          setPlayList(res.data?.items);
          controller = null;
-      }).catch((err)=>{console.log(err)});
+      })
+      .catch((err)=>{console.log(err)});
 
       return () => controller?.abort();
    },[]);   

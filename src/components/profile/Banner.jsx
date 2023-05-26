@@ -13,25 +13,37 @@ function Banner() {
 
   useEffect(()=>{
 
-    apiClient.get('me').then(res => {
-     // set img
-     setUserImg(res.data.images[0].url);
-    
-     // set url
-     setUserUrl(res.data.external_urls.spotify);
-   
-     // set name
-     setUserName(res.data.display_name);
-    
-     // set followers
-     setFollower(res.data.followers.total);
-    });
-    
-    //set playlist
-    apiClient.get('me/playlists').then(res => setPlayList(res.data.items.length)).catch((err)=>console.log(err));
+    let controller = new AbortController();
 
+    (
+      async function fetchdata(){
+        try{
+            const { data } = await apiClient.get('me');
+              // set img
+              setUserImg(data.images[0].url);
+           
+              // set url
+              setUserUrl(data.external_urls.spotify);
+            
+              // set name
+              setUserName(data.display_name);
+             
+              // set followers
+              setFollower(data.followers.total);
+
+           await apiClient.get('me/playlists')
+           .then(res => setPlayList(res.data.items.length))
+           .catch((err)=>console.log(err));
+
+           controller = null;
+        }
+        catch (error) {
+          console.error(error);
+        }
+    })();
     
-  },[]);
+    return () => controller?.abort();
+  }, []);
 
   return (
     <div className='banner mt-12'>

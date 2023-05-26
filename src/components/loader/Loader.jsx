@@ -3,8 +3,8 @@ import '../loader/Loader.css'
 
 function Loader() {
   return (
-    <main className='flex justify-center flex-col items-center h-[100vh]'>
-        <div className="loader w-60 h-12 text-center absolute left-2/4 uppercase font-black text-base text-t_white">Loading</div>
+    <main className='flex justify-center flex-col items-center h-full'>
+        <div className="loader  text-center uppercase font-black text-base text-t_white">Loading</div>
     </main>  
     
 )

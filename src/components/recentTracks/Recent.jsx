@@ -5,14 +5,20 @@ import Loader from '../loader/Loader';
 
 function Recent(){
 
-   const [recentTracks, setRecentTracks] = useState([]);
-   useEffect(()=>{
-    apiClient.get('me/player/recently-played').then(res =>{
-          setRecentTracks(res.data.items);
-        }).catch((err)=>{
-            console.log(err);
-        })
-   },[]);
+  const [recentTracks, setRecentTracks] = useState([]);
+
+  useEffect(()=>{
+      
+    let controller = new AbortController();
+    apiClient.get('me/player/recently-played')
+    .then(res =>{
+        setRecentTracks(res.data.items);
+        controller = null;
+    })
+    .catch((err)=>console.log(err))
+        
+    return ()=> controller?.abort();
+  },[]);
 
   return (
     <div className='screen_container lg:w-[90%] md:w-10/12 w-full md:max-w-[100%] h-full min-h-screen md:p-18 p-8 pr-3 mx-auto mb-10 overflow-y-scroll ml-auto md:ml-20 mt-12'>
