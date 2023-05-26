@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { apiClient } from "../../spotify";
-import { useLocation } from 'react-router';
 import Track from '../tracks/Track';
 import Loader from '../loader/Loader';
+import { useParams } from 'react-router';
 
 function PlaylistDetails() {
 
-    const[listDetails,setListDetails] = useState([]);
-    const location = useLocation();
+  const[listDetails,setListDetails] = useState([]);
+  const params = useParams();
+  useEffect(()=>{
 
-    useEffect(()=>{
-          if(location.state){
-            apiClient.get("playlists/"+ location.state?.id).then((res)=> {setListDetails(res.data)});
-          }
-    },[listDetails]);
+      let controller = new AbortController();
+      apiClient.get(`playlists/${params.productId}`)
+      .then(res => {
+        setListDetails(res.data)
+        controller=null;
+      })
+      .catch((err)=> console.error(err));
+  },[]);
 
   return (
     <main className='playlist_d_container lg:w-[90%] md:w-10/12 w-full md:max-w-[100%] h-full min-h-screen md:p-18 p-8 mx-auto ml-0 md:ml-20 overflow-y-scroll flex flex-col lg:flex-row items-start mt-12'>
