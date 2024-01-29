@@ -66,6 +66,8 @@ Welcome to the Spotify Song List App! This application allows you to check out t
 Enjoy exploring your Spotify Song List! 🎶
 
 ## project screenshots:
+![image](https://github.com/Jagrati1213/react-spotify-clone/assets/85276293/5a96613a-b2fd-4a7f-a1f7-b1c8247c635f)
+![image](https://github.com/Jagrati1213/react-spotify-clone/assets/85276293/8815e1d3-9264-4d2c-a531-da9e4860e6ba)
 
 
 
