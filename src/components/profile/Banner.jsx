@@ -50,7 +50,7 @@ function Banner() {
           {/* Profile Image */}
           <div className="profile_container flex flex-col justify-center items-center">
 
-               <div className="profile  bg-t_black rounded-full flex items-center justify-center">
+               <div className="profile  bg-t_black rounded-full flex items-center justify-center w-[8rem]">
                  <img src={userImg} alt="Me" className='rounded-full' />
                </div>
 
